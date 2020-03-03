@@ -1,0 +1,31 @@
+.topbar {
+	background: #2A3F54;
+	border-color: #2A3F54;
+	border-radius: 0px;
+}
+
+.topbar .navbar-header a {
+	color: #F1F6EE;
+}
+.box{
+    padding: 20px 5px 5px 5px;
+    background-color: beige;
+    height: 100vh;
+}
+
+th, td{padding:2px !important}
+
+.ex{
+    background-color: #294452 ;
+    color: #F1F6EE;
+    
+}
+
+
+
+/* table, th, td {
+    background-color: #294452;
+  } */
+
+
+
