@@ -1,14 +1,6 @@
-.topbar {
-	background: #2A3F54;
-	border-color: #2A3F54;
-	border-radius: 0px;
-}
 
-.topbar .navbar-header a {
-	color: #F1F6EE;
-}
 .box{
-    padding: 20px 5px 5px 5px;
+    padding: 20px 20px 20px 20px;
     background-color: beige;
     height: 100vh;
 }
@@ -22,10 +14,26 @@ th, td{padding:2px !important}
 }
 
 
+.card{
+    font-size: 1.5em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
-/* table, th, td {
-    background-color: #294452;
-  } */
+.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8{
+    font-weight: bold;
+}
+
+/* .c1, .c2{
+    font-size: 3em;
+} */
+
+ 
+
+
+
+
 
 
 
