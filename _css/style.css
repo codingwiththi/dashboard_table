@@ -1,49 +1,53 @@
 
-.box{
-    padding: 20px 20px 20px 20px;
-    background-color: beige;
-    height: 100vh;
-}
 
 th, td{
     padding:2px !important;
 }
 
-.ex{
-    background-color: #294452 ;
-    color: #F1F6EE;
-    
+
+.mic{
+    text-align: center;
+    background-color: green;
+    padding: 0.6rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.cab, .met{
+    text-align: center;
+    background-color: gray;
+    padding: 0.77rem;
+    color: white;
+    border-radius: 5px;
 }
 
 
-.card{
-    font-size: 2em;
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
-}
-
-
-.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8{
+.info{
+    text-align: center;
+    background-color: #294452;
+    /* padding: 1rem; */
+    color: white;
+    border-radius: 5px;
+    font-size: 2.9rem;
     font-weight: bold;
-    /* font-size: 20px;
-    margin: 0 !important; */
 }
 
-/* .c1, .c2{
-    font-size: 3em;
-} */
 
-/* h1 {
-    margin-bottom: 5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    } */
+.fila{
+    padding: 26.5px;
+}
 
- 
+.info_fila{
+    background-color: green;
+    font-size: 4rem;
+}
 
+.info_agentes{
+    background-color: green;
+}
 
-
-
-
-
-
+.info_tma, .info_tme{
+     font-size: 2rem; 
+     padding: 0.35rem;
+     padding-bottom: 0.9rem;
+}
