@@ -1,40 +1,43 @@
-
-
-th, td{
-    padding:2px !important;
+th,
+td {
+    padding: 2px !important;
 }
 
-
-.mic{
+.mic {
     text-align: center;
     padding: 0.6rem;
     color: white;
     border-radius: 5px;
 }
 
-.cab, .met{
+.cabecalho,
+.metrica {
     text-align: center;
     padding: 0.77rem;
     color: white;
     border-radius: 5px;
 }
 
-.temporizador, .contador {
+.temporizador,
+.contador {
     text-align: center;
     color: white;
     padding: 0.30rem;
     border-radius: 5px;
 }
 
-.contador{
+.temporizador {
+    padding: 0.5rem;
+}
+
+.contador {
     margin-top: 0%;
     padding-top: 0%;
     border-radius: 5px;
+    font-weight: bold;
 }
 
-
-
-.info{
+.info {
     text-align: center;
     color: white;
     border-radius: 5px;
@@ -42,17 +45,30 @@ th, td{
     font-weight: bold;
 }
 
-
-.fila{
+.fila {
     padding: 26.5px;
 }
 
-.info_fila{
+.info_fila {
     font-size: 4rem;
 }
 
-.info_tma, .info_tme{
-     font-size: 2rem; 
-     padding: 0.35rem;
-     padding-bottom: 0.9rem;
+.info_tma,
+.info_tme {
+    font-size: 2rem;
+    padding: 0.35rem;
+    padding-bottom: 0.9rem;
 }
+
+.info_fila {
+    padding-bottom: 0px !important;
+    border-radius: 0px;
+}
+
+
+/* .c1,
+.c2,
+.c3,
+.c4 {
+    display: none;
+} */

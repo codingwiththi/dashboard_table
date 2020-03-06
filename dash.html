@@ -3,14 +3,61 @@
 
 <head>
     <met bg-secondarya charset="UTF-8">
-    <met bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
+        <met bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Dashboard Nexa</title>
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <script src="https://www.amcharts.com/lib/4/core.js"></script>
+            <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+            <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+            <script type="text/javascript" src="_js/script.js"></script>
+            <title>Dashboard Nexa</title>
+
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                google.charts.load("current", {
+                    packages: ['corechart']
+                });
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ["Element", "Density", {
+                            role: "style"
+                        }],
+                        ["Recebidas", 245, "#b87333"],
+                        ["Atendidas", 150, "silver"],
+                        ["Abandonadas", 19, "gold"],
+                    ]);
+
+                    var view = new google.visualization.DataView(data);
+                    view.setColumns([0, 1, {
+                            calc: "stringify",
+                            sourceColumn: 1,
+                            type: "string",
+                            role: "annotation"
+                        },
+                        2
+                    ]);
+
+                    var options = {
+
+                        width: 200,
+                        height: 400,
+                        bar: {
+                            groupWidth: "85%"
+                        },
+                        legend: {
+                            position: "none"
+                        },
+                        backgroundColor: 'gray',
+                    };
+                    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+                    chart.draw(view, options);
+                }
+            </script>
 </head>
 
 <body>
@@ -25,36 +72,36 @@
                                 <i class="material-icons md-48">mic</i></div>
                         </th>
                         <th scope="col">
-                            <div class="c1 cab bg-info" hidden>
+                            <div class="c1 cabecalho bg-info">
                                 TJES
                             </div>
                         </th>
                         <th scope="col">
-                            <div class="cab bg-info c2" hidden>UNIMED
+                            <div class="cabecalho bg-info c2">UNIMED
                             </div>
                         </th>
                         <th scope="col">
-                            <div class="cab bg-info c3" hidden>SEGER
+                            <div class="cabecalho bg-info c3">SEGER
                             </div>
                         </th>
                         <th scope="col">
-                            <div class="cab bg-info c4" hidden>SULGAS
+                            <div class="cabecalho bg-info c4">SULGAS
                             </div>
                         </th>
                         <th scope="col">
-                            <div class="cab bg-info c5">SUNCOKE
+                            <div class="cabecalho bg-info c5">SUNCOKE
                             </div>
                         </th>
                         <th scope="col">
-                            <div class="cab bg-info c6">TECHNIP PTG
+                            <div class="cabecalho bg-info c6">TECHNIP PTG
                             </div>
                         </th>
                         <th scope="col">
-                            <div class="cab bg-info c7">TECHNIP ENG
+                            <div class="cabecalho bg-info c7">TECHNIP ENG
                             </div>
                         </th>
                         <th scope="col">
-                            <div class="cab bg-info c8">TECHNIP RH
+                            <div class="cabecalho bg-info c8">TECHNIP RH
                             </div>
                         </th>
                     </tr>
@@ -62,31 +109,28 @@
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info fila">
+                            <div class="metrica bg-info fila">
                                 <i class="material-icons">ring_volume</i>
                                 <h6 class="card-subtitle">Fila</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_fila bg-success" hidden>
-                                0
-                            </div>
-                            <!-- <div class="card c1 bg-success text-white exe">
-                                <div class="card-body  text-center">001</div>
-                            </div> -->
-                        </td>
-                        <td>
-                            <div class="info c2 info_fila bg-success" hidden>
+                            <div class="info c1 info_fila bg-success">
                                 0
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_fila bg-success" hidden>
+                            <div class="info c2 info_fila bg-success">
                                 0
                             </div>
                         </td>
                         <td>
-                            <div class="info c4 info_fila bg-danger" hidden>
+                            <div class="info c3 info_fila bg-success">
+                                0
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c4 info_fila bg-danger">
                                 1
                             </div>
                         </td>
@@ -113,75 +157,75 @@
                     </tr>
                     <tr>
                         <th scope="row">
-                            <div class="temporizador bg-info">                    
+                            <div class="temporizador bg-info">
                                 <h6 class="card-subtitle">Esperando</h6>
                             </div>
                         </th>
-                        <td>
-                            <div class="bg-success text-center contador" hidden>
+                        <td class="linha_contador">
+                            <div class="bg-success c1 info_contador text-center contador">
                                 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="bg-success text-center contador" hidden>
+                            <div class="bg-success c2 info_contador text-center contador">
                                 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="bg-success text-center contador" hidden>
+                            <div class="bg-success c3 info_contador text-center contador">
                                 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="bg-danger text-center contador" hidden>
+                            <div class="bg-danger c4 info_contador text-center contador">
                                 05:32
                             </div>
                         </td>
                         <td>
-                            <div class="bg-success text-center contador">
+                            <div class="bg-success c5 info_contador text-center contador">
                                 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="bg-danger text-center contador">
+                            <div class="bg-danger c6 info_contador text-center contador">
                                 01:04
                             </div>
                         </td>
                         <td>
-                            <div class="bg-success text-center contador">
+                            <div class="bg-success c7 info_contador text-center contador">
                                 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="bg-warning text-center contador">
-                               <strong>02:20</strong>
+                            <div class="bg-warning c8 info_contador text-center contador">
+                                20:20
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info agentes">
+                            <div class="metrica bg-info agentes">
                                 <i class="material-icons">portrait</i>
                                 <h6 class="card-subtitle">Agentes</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_agentes bg-danger" hidden>
+                            <div class="info c1 info_agentes bg-danger">
                                 00
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_agentes bg-success" hidden>
+                            <div class="info c2 info_agentes bg-success">
                                 04
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_agentes bg-danger" hidden>
+                            <div class="info c3 info_agentes bg-danger">
                                 00
                             </div>
                         </td>
                         <td>
-                            <div class="info c4 info_agentes bg-danger" hidden>
+                            <div class="info c4 info_agentes bg-danger">
                                 00
                             </div>
                         </td>
@@ -209,36 +253,30 @@
 
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info conversando">
+                            <div class="metrica bg-info conversando">
                                 <i class="material-icons">phone_in_talk</i>
                                 <h6 class="card-subtitle">Conversando</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_conv bg-secondary" hidden>
+                            <div class="info c1 info_conv bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_conv bg-secondary" hidden>
+                            <div class="info c2 info_conv bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_conv bg-secondary" hidden>
+                            <div class="info c3 info_conv bg-secondary">
                                 000
                             </div>
-                            <!-- <div class="card c3 bg-info text-white">
-                                <div class="card-body text-center">000</div>
-                            </div> -->
                         </td>
                         <td>
-                            <div class="info c4 info_conv bg-secondary" hidden>
+                            <div class="info c4 info_conv bg-secondary">
                                 004
                             </div>
-                            <!-- <div class="card c4 bg-info text-white">
-                                <div class="card-body text-center">000</div>
-                            </div> -->
                         </td>
                         <td>
                             <div class="info c5 info_conv bg-secondary">
@@ -264,28 +302,28 @@
 
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info recebidas">
+                            <div class="metrica bg-info recebidas">
                                 <i class="material-icons">phone_callback</i>
                                 <h6 class="card-subtitle">Recebidas</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_rec bg-secondary" hidden>
+                            <div class="info c1 info_rec bg-secondary">
+                                <div id="columnchart_values" style="width: 144px; height: 250px; "></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c2 info_rec bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_rec bg-secondary" hidden>
+                            <div class="info c3 info_rec bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_rec bg-secondary" hidden>
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_rec bg-secondary" hidden>
+                            <div class="info c4 info_rec bg-secondary">
                                 000
                             </div>
                         </td>
@@ -308,34 +346,34 @@
                             <div class="info c8 info_rec bg-secondary">
                                 000
                             </div>
-                            
+
                         </td>
                     </tr>
 
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info atendidas">
+                            <div class="metrica bg-info atendidas">
                                 <i class="material-icons">phone</i>
                                 <h6 class="card-subtitle">Atendidas</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_aten bg-secondary" hidden>
+                            <div class="info c1 info_aten bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_aten bg-secondary" hidden>
+                            <div class="info c2 info_aten bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_aten bg-secondary" hidden>
+                            <div class="info c3 info_aten bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c4 info_aten bg-secondary" hidden>
+                            <div class="info c4 info_aten bg-secondary">
                                 000
                             </div>
                         </td>
@@ -363,28 +401,28 @@
 
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info abandonadas">
+                            <div class="metrica bg-info abandonadas">
                                 <i class="material-icons">phone_missed</i>
                                 <h6 class="card-subtitle">Abandonadas</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_aban bg-secondary" hidden>
+                            <div class="info c1 info_aban bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_aban bg-secondary" hidden>
+                            <div class="info c2 info_aban bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_aban bg-secondary" hidden>
+                            <div class="info c3 info_aban bg-secondary">
                                 000
                             </div>
                         </td>
                         <td>
-                            <div class="info c4 info_aban bg-secondary" hidden>
+                            <div class="info c4 info_aban bg-secondary">
                                 000
                             </div>
                         </td>
@@ -412,119 +450,106 @@
 
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info tma">
+                            <div class="metrica bg-info tma">
                                 <i class="material-icons">access_time</i>
                                 <h6 class="card-subtitle">TMA</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_tma bg-secondary" hidden>
-                                <i class="material-icons md-48">thumb_up</i>
-                                00:00
+                            <div class="info c1 info_tma bg-secondary">
+                                <i class="material-icons md-48">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_tma bg-secondary" hidden>
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                            <div class="info c2 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_tma bg-secondary" hidden>
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                            <div class="info c3 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="info c4 info_tma bg-secondary" hidden>
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                            <div class="info c4 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
                             <div class="info c5 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
                             <div class="info c6 info_tma bg-danger">
-                                <i class="material-icons">thumb_down</i>
-                                10:00
+                                <i class="material-icons">thumb_down</i> 10:00
                             </div>
                         </td>
                         <td>
                             <div class="info c7 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
                             <div class="info c8 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                     </tr>
 
                     <tr>
                         <th scope="row">
-                            <div class="met bg-info tme">
+                            <div class="metrica bg-info tme">
                                 <i class="material-icons">access_time</i>
                                 <h6 class="card-subtitle">TME</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_tme bg-secondary" hidden>
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                            <div class="info c1 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_tme bg-secondary" hidden>
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                            <div class="info c2 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_tme bg-secondary" hidden>
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                            <div class="info c3 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
-                            <div class="info c4 info_tme bg-secondary" hidden>
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                            <div class="info c4 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
                             <div class="info c5 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
                             <div class="info c6 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
                             <div class="info c7 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                         <td>
                             <div class="info c8 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i>
-                                00:00
+                                <i class="material-icons">thumb_up</i> 00:00
                             </div>
                         </td>
                     </tr>
         </div>
     </div>
+
+
+
 
 </body>
 
