@@ -2,65 +2,24 @@
 <html lang="pt-br">
 
 <head>
-    <met bg-secondarya charset="UTF-8">
-        <met bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta bg-secondarya charset="UTF-8">
+    <meta bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <!-- Bootstrap CSS -->
-            <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <script src="https://www.amcharts.com/lib/4/core.js"></script>
-            <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-            <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-            <script type="text/javascript" src="_js/script.js"></script>
-            <title>Dashboard Nexa</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <title>Dashboard Nexa</title>
 
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <script type="text/javascript">
-                google.charts.load("current", {
-                    packages: ['corechart']
-                });
-                google.charts.setOnLoadCallback(drawChart);
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-                function drawChart() {
-                    var data = google.visualization.arrayToDataTable([
-                        ["Element", "Density", {
-                            role: "style"
-                        }],
-                        ["Recebidas", 245, "#b87333"],
-                        ["Atendidas", 150, "silver"],
-                        ["Abandonadas", 19, "gold"],
-                    ]);
-
-                    var view = new google.visualization.DataView(data);
-                    view.setColumns([0, 1, {
-                            calc: "stringify",
-                            sourceColumn: 1,
-                            type: "string",
-                            role: "annotation"
-                        },
-                        2
-                    ]);
-
-                    var options = {
-
-                        width: 200,
-                        height: 400,
-                        bar: {
-                            groupWidth: "85%"
-                        },
-                        legend: {
-                            position: "none"
-                        },
-                        backgroundColor: 'gray',
-                    };
-                    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-                    chart.draw(view, options);
-                }
-            </script>
 </head>
 
 <body>
+
 
     <div class="container-fluid">
         <div class="table-responsive">
@@ -260,42 +219,42 @@
                         </th>
                         <td>
                             <div class="info c1 info_conv bg-secondary">
-                                000
+                                00
                             </div>
                         </td>
                         <td>
                             <div class="info c2 info_conv bg-secondary">
-                                000
+                                00
                             </div>
                         </td>
                         <td>
                             <div class="info c3 info_conv bg-secondary">
-                                000
+                                00
                             </div>
                         </td>
                         <td>
                             <div class="info c4 info_conv bg-secondary">
-                                004
+                                04
                             </div>
                         </td>
                         <td>
                             <div class="info c5 info_conv bg-secondary">
-                                000
+                                00
                             </div>
                         </td>
                         <td>
                             <div class="info c6 info_conv bg-secondary">
-                                000
+                                00
                             </div>
                         </td>
                         <td>
                             <div class="info c7 info_conv bg-secondary">
-                                000
+                                00
                             </div>
                         </td>
                         <td>
                             <div class="info c8 info_conv bg-secondary">
-                                000
+                                00
                             </div>
                         </td>
                     </tr>
@@ -307,46 +266,29 @@
                                 <h6 class="card-subtitle">Recebidas</h6>
                             </div>
                         </th>
-                        <td>
-                            <div class="info c1 info_rec bg-secondary">
-                                <div id="columnchart_values" style="width: 144px; height: 250px; "></div>
-                            </div>
+                        <td rowspan="3">
+                            <div id="columnchart_values" class="graph"></div>
                         </td>
-                        <td>
-                            <div class="info c2 info_rec bg-secondary">
-                                000
-                            </div>
+                        <td rowspan="3">
+                            <div id="columnchart_values2" class="graph"></div>
                         </td>
-                        <td>
-                            <div class="info c3 info_rec bg-secondary">
-                                000
-                            </div>
+                        <td rowspan="3">
+                            <div id="columnchart_values3" class="graph"></div>
                         </td>
-                        <td>
-                            <div class="info c4 info_rec bg-secondary">
-                                000
-                            </div>
+                        <td rowspan="3">
+                            <div id="columnchart_values4" class="graph"></div>
                         </td>
-                        <td>
-                            <div class="info c5 info_rec bg-secondary">
-                                000
-                            </div>
+                        <td rowspan="3">
+                            <div id="columnchart_values5" class="graph"></div>
                         </td>
-                        <td>
-                            <div class="info c6 info_rec bg-secondary">
-                                000
-                            </div>
+                        <td rowspan="3">
+                            <div id="columnchart_values6" class="graph"></div>
                         </td>
-                        <td>
-                            <div class="info c7 info_rec bg-secondary">
-                                000
-                            </div>
+                        <td rowspan="3">
+                            <div id="columnchart_values7" class="graph"></div>
                         </td>
-                        <td>
-                            <div class="info c8 info_rec bg-secondary">
-                                000
-                            </div>
-
+                        <td rowspan="3">
+                            <div id="columnchart_values8" class="graph"></div>
                         </td>
                     </tr>
 
@@ -357,46 +299,7 @@
                                 <h6 class="card-subtitle">Atendidas</h6>
                             </div>
                         </th>
-                        <td>
-                            <div class="info c1 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c2 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c3 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c5 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c6 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c7 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c8 info_aten bg-secondary">
-                                000
-                            </div>
-                        </td>
+
                     </tr>
 
                     <tr>
@@ -406,46 +309,7 @@
                                 <h6 class="card-subtitle">Abandonadas</h6>
                             </div>
                         </th>
-                        <td>
-                            <div class="info c1 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c2 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c3 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c5 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c6 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c7 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c8 info_aban bg-secondary">
-                                000
-                            </div>
-                        </td>
+
                     </tr>
 
                     <tr>
@@ -546,7 +410,10 @@
                         </td>
                     </tr>
         </div>
+
     </div>
+
+    <script src="_js/script.js"></script>
 
 
 

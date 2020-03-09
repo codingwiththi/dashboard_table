@@ -65,6 +65,14 @@ td {
     border-radius: 0px;
 }
 
+.graph {
+    text-align: center;
+    width: 0rem;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 
 /* .c1,
 .c2,
