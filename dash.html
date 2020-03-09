@@ -12,13 +12,53 @@
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
     <script src="https://www.amcharts.com/lib/4/charts.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <title>Dashboard Nexa</title>
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['At 20s', 11],
+                ['At 5s', 2],
+                ['At 10', 4],
+            ]);
+
+            var options = {
+                title: 'SLAs'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
+            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('piechart5'));
+            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('piechart6'));
+            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('piechart7'));
+            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('piechart8'));
+            chart.draw(data, options);
+        }
+    </script>
 
 </head>
 
 <body>
+    <!-- <div id="chartdiv" style="background-color: red; height: 8rem;"></div> -->
+
 
 
     <div class="container-fluid">
@@ -258,6 +298,218 @@
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="metrica bg-info tma_tme">
+                                TMA / TME
+                                <!-- <i class="material-icons">access_time</i> TMA / TME -->
+                            </div>
+                        </th>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c1 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 10:10
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c1 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c1 info_tma bg-secondary">
+                                <i class="material-icons md-48">thumb_up</i> 00:00
+                            </div>
+                            <div class="info c1 info_tme bg-secondary">
+                                <i class="material-icons md-48">thumb_up</i> 00:00
+                            </div> -->
+                        </td>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c2 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c2 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c2 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div> -->
+                        </td>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c3 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c3 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c3 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div> -->
+                        </td>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c4 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c4 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c4 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div> -->
+                        </td>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c5 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c5 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c5 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div> -->
+                        </td>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c6 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c6 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c6 info_tma bg-danger">
+                                <i class="material-icons">thumb_down</i> 10:00
+                            </div> -->
+                        </td>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c7 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c7 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c7 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div> -->
+                        </td>
+                        <td>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>
+                                        <div class="info c8 info_tma bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="info c8 info_tme bg-secondary">
+                                            <i class="material-icons md-18">thumb_up</i> 00:00
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                            <!-- <div class="info c8 info_tma bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div> -->
+                        </td>
+                    </tr>
+
+                    <!-- <tr>
+                        <th scope="row">
+                            <div class="metrica bg-info tme">
+                                <i class="material-icons">access_time</i>
+                                <h6 class="card-subtitle">TME</h6>
+                            </div>
+                        </th>
+                        <td>
+                            <div class="info c1 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c2 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c3 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c4 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c5 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c6 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c7 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info c8 info_tme bg-secondary">
+                                <i class="material-icons">thumb_up</i> 00:00
+                            </div>
+                        </td>
+                    </tr> -->
 
                     <tr>
                         <th scope="row">
@@ -311,109 +563,66 @@
                         </th>
 
                     </tr>
-
                     <tr>
                         <th scope="row">
-                            <div class="metrica bg-info tma">
-                                <i class="material-icons">access_time</i>
-                                <h6 class="card-subtitle">TMA</h6>
+                            <div class="sla bg-info sla">
+                                <i class="material-icons">timer</i>
+                                <h6 class="card-subtitle">SLA's</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_tma bg-secondary">
-                                <i class="material-icons md-48">thumb_up</i> 00:00
+                            <div class="info c1 info_sla bg-secondary">
+                                <div id="piechart" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
-                            <div class="info c2 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
+                            <div class="info c2 info_sla bg-secondary">
+                                <div id="piechart2" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
-                            <div class="info c3 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
+                            <div class="info c3 info_sla bg-secondary">
+                                <div id="piechart3" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
-                            <div class="info c4 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
+                            <div class="info c4 info_sla bg-secondary">
+                                <div id="piechart4" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
-                            <div class="info c5 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
+                            <div class="info c5 info_sla bg-secondary">
+                                <div id="piechart5" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
-                            <div class="info c6 info_tma bg-danger">
-                                <i class="material-icons">thumb_down</i> 10:00
+                            <div class="info c6 info_sla bg-secondary">
+                                <div id="piechart6" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
-                            <div class="info c7 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
+                            <div class="info c7 info_sla bg-secondary">
+                                <div id="piechart7" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
-                            <div class="info c8 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
+                            <div class="info c8 info_sla bg-secondary">
+                                <div id="piechart8" style="width: 176px; height: 150px;"></div>
                             </div>
                         </td>
                     </tr>
 
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica bg-info tme">
-                                <i class="material-icons">access_time</i>
-                                <h6 class="card-subtitle">TME</h6>
-                            </div>
-                        </th>
-                        <td>
-                            <div class="info c1 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c2 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c3 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c5 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c6 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c7 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c8 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                    </tr>
+
         </div>
 
     </div>
 
+
+
     <script src="_js/script.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
 
 

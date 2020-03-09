@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 th,
 td {
     padding: 2px !important;
@@ -14,6 +18,14 @@ td {
 .metrica {
     text-align: center;
     padding: 0.77rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.sla {
+    text-align: center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
     color: white;
     border-radius: 5px;
 }
@@ -55,9 +67,9 @@ td {
 
 .info_tma,
 .info_tme {
-    font-size: 2rem;
-    padding: 0.35rem;
-    padding-bottom: 0.9rem;
+    font-size: 1rem;
+    padding: 0rem;
+    padding-bottom: 0rem;
 }
 
 .info_fila {
@@ -69,8 +81,25 @@ td {
     text-align: center;
     width: 0rem;
     margin-right: 0;
-    padding-left: 1rem;
+    padding-left: 0rem;
     padding-right: 1rem;
+}
+
+.graph2 {
+    height: 150px;
+    width: 300px;
+}
+
+.tma_tme {
+    padding: 0rem;
+    padding-top: 0.20rem;
+    padding-bottom: 0.20rem;
+    font-size: 1rem;
+}
+
+#chartdiv {
+    width: 200px;
+    height: 500px;
 }
 
 
