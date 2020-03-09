@@ -32,9 +32,9 @@ function drawChart() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["Recebidas", 300, "#17a2b8"],
-        ["Atendidas", 150, "#28a745"],
-        ["Abandonadas", 19, "#dc3545"],
+        ["", 300, "#ffc107"],
+        ["", 150, "#28a745"],
+        ["", 19, "#dc3545"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -58,11 +58,11 @@ function drawChart() {
             position: "none"
         },
         backgroundColor: 'white',
-    };
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-    chart.draw(view, options);
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values2"));
-    chart.draw(view, options);
+     };
+    // var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+    // chart.draw(view, options);
+    // var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values2"));
+    // chart.draw(view, options);
     var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values3"));
     chart.draw(view, options);
     var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values4"));

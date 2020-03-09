@@ -26,13 +26,13 @@
 
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
-                ['At 20s', 11],
-                ['At 5s', 2],
-                ['At 10', 4],
+                ['20s', 10],
+                ['5s', 45],
+                ['10s', 45],
             ]);
 
             var options = {
-                title: 'SLAs'
+                legend: 'top',
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -513,7 +513,7 @@
 
                     <tr>
                         <th scope="row">
-                            <div class="metrica bg-info recebidas">
+                            <div class="metrica bg-warning recebidas">
                                 <i class="material-icons">phone_callback</i>
                                 <h6 class="card-subtitle">Recebidas</h6>
                             </div>
@@ -546,7 +546,7 @@
 
                     <tr>
                         <th scope="row">
-                            <div class="metrica bg-info atendidas">
+                            <div class="metrica bg-success atendidas">
                                 <i class="material-icons">phone</i>
                                 <h6 class="card-subtitle">Atendidas</h6>
                             </div>
@@ -556,7 +556,7 @@
 
                     <tr>
                         <th scope="row">
-                            <div class="metrica bg-info abandonadas">
+                            <div class="metrica bg-danger abandonadas">
                                 <i class="material-icons">phone_missed</i>
                                 <h6 class="card-subtitle">Abandonadas</h6>
                             </div>

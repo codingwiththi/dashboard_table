@@ -24,8 +24,8 @@ td {
 
 .sla {
     text-align: center;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2.7rem;
+    padding-bottom: 2.7rem;
     color: white;
     border-radius: 5px;
 }
@@ -89,6 +89,11 @@ td {
     height: 150px;
     width: 300px;
 }
+
+
+ .c1, .c2{
+    display: none;
+} 
 
 .tma_tme {
     padding: 0rem;
