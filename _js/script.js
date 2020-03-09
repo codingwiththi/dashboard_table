@@ -32,9 +32,9 @@ function drawChart() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 300, "#ffc107"],
-        ["", 150, "#28a745"],
-        ["", 19, "#dc3545"],
+        ["", 300, "#F4E76E"],
+        ["", 150, "#82E198"],
+        ["", 19, "#4AAAE7"],
     ]);
 
     var view = new google.visualization.DataView(data);

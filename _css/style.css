@@ -97,6 +97,18 @@ td {
     font-size: 1rem;
 }
 
+.recebidas {
+    background-color: #F4E76E;
+}
+
+.atendidas {
+    background-color: #82E198;
+}
+
+.abandonadas {
+    background-color: #4AAAE7;
+}
+
 #chartdiv {
     width: 200px;
     height: 500px;
