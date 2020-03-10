@@ -24,7 +24,7 @@ function cliente1RAA() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 90, '#6200ea'],
+        ["", 40, '#6200ea'],
         ["", 20, "#004d40"],
         ["", 64, "#b71c1c"],
     ]);
