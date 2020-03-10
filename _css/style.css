@@ -24,19 +24,20 @@ td {
 
 .sla {
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     color: white;
     border-radius: 5px;
 }
 
-.info_sla {
+
+/* .info_sla {
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
     color: white;
     border-radius: 5px;
-}
+} */
 
 .sla_01 {
     background-color: #311b92;
