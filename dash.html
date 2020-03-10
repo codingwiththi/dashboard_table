@@ -4,16 +4,24 @@
 <head>
     <meta bg-secondarya charset="UTF-8">
     <meta bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Nexa</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Dashboard Nexa</title>
 
 </head>
 
 <body>
+    <!-- <div id="chartdiv" style="background-color: red; height: 8rem;"></div> -->
+
+
+
     <div class="container-fluid">
         <div class="table-responsive">
             <table class="table table-bordered ">
@@ -434,38 +442,138 @@
                             <div class="sla bg-info sla">
                                 <i class="material-icons">timer</i>
                                 <h6 class="card-subtitle">SLA's</h6>
-                                <h6 class="card-body">Atendimento</h6>
                             </div>
                         </th>
                         <td>
-                            <div class="info c1 info_sla">
-                                <div id="c1_sla" style="width: 200px; height: 150px;"></div>
-                            </div>
+                            <table style="width:100%" class="table_sla">
+                                <tr class="sla_metrica bg-info">
+                                    <th>Abandonadas 20s</th>
+                                    <th>META:
+                                        <=10%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-success">5%</td>
+                                </tr>
+                                <tr class="sla_metrica bg-info">
+                                    <th>Conversa</th>
+                                    <th>META:
+                                        <=5%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-danger">7%</td>
+                                </tr>
+
+                            </table>
                         </td>
                         <td>
-                            <div class="info c2 info_sla">
-                                <div id="c2_sla" style="width: 200px; height: 150px;"></div>
-                            </div>
+                            <table style="width:100%" class="table_sla">
+                                <tr class="sla_metrica bg-info">
+                                    <th>Abandonadas 20s</th>
+                                    <th>META:
+                                        <=10%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-success">5%</td>
+                                </tr>
+                                <tr class="sla_metrica bg-info">
+                                    <th>Conversa</th>
+                                    <th>META:
+                                        <=5%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-danger">7%</td>
+                                </tr>
+
+                            </table>
+
                         </td>
                         <td>
-                            <div class="info c3 info_sla">
-                                <div id="c3_sla" style="width: 200px; height: 150px;"></div>
-                            </div>
+                            <table style="width:100%" class="table_sla">
+                                <tr class="sla_metrica bg-info">
+                                    <th>Abandonadas 20s</th>
+                                    <th>META:
+                                        <=10%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-success">5%</td>
+                                </tr>
+                                <tr class="sla_metrica bg-info">
+                                    <th>Conversa</th>
+                                    <th>META:
+                                        <=5%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-danger">7%</td>
+                                </tr>
+
+                            </table>
+
                         </td>
                         <td>
-                            <div class="info c4 info_sla">
-                                <div id="c4_sla" style="width: 200px; height: 150px;"></div>
-                            </div>
+                            <table style="width:100%" class="table_sla">
+                                <tr class="sla_metrica bg-info">
+                                    <th>Abandonadas 20s</th>
+                                    <th>META:
+                                        <=10%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-success">5%</td>
+                                </tr>
+                                <tr class="sla_metrica bg-info">
+                                    <th>Conversa</th>
+                                    <th>META:
+                                        <=5%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-danger">7%</td>
+                                </tr>
+
+                            </table>
+
                         </td>
                         <td>
-                            <div class="info c5 info_sla">
-                                <div id="c5_sla" style="width: 200px; height: 150px;"></div>
-                            </div>
+                            <table style="width:100%" class="table_sla">
+                                <tr class="sla_metrica bg-info">
+                                    <th>Abandonadas 20s</th>
+                                    <th>META:
+                                        <=10%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-success">5%</td>
+                                </tr>
+                                <tr class="sla_metrica bg-info">
+                                    <th>Conversa</th>
+                                    <th>META:
+                                        <=5%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-danger">7%</td>
+                                </tr>
+
+                            </table>
+
                         </td>
                         <td>
-                            <div class="info c6 info_sla">
-                                <div id="c6_sla" style="width: 200px; height: 150px;"></div>
-                            </div>
+                            <table style="width:100%" class="table_sla">
+                                <tr class="sla_metrica bg-info">
+                                    <th>Abandonadas 20s</th>
+                                    <th>META:
+                                        <=10%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-success">5%</td>
+                                </tr>
+                                <tr class="sla_metrica bg-info">
+                                    <th>Conversa</th>
+                                    <th>META:
+                                        <=5%</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="sla_info text-center bg-danger">7%</td>
+                                </tr>
+
+                            </table>
+
                         </td>
 
                     </tr>
@@ -475,8 +583,17 @@
 
     </div>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
     <script src="_js/script.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/kelly.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+
+
 </body>
 
 </html>
