@@ -1,40 +1,212 @@
-google.charts.load('current', { 'packages': ['corechart'] });
-google.charts.setOnLoadCallback(drawChart);
+//GRAFICOS PIZZA
+google.charts.load('current', {
+    'packages': ['corechart']
+});
 
-function drawChart() {
+// Draw the pie chart for Sarah's pizza when Charts is loaded.
+google.charts.setOnLoadCallback(cliente1SLA);
 
-    var data = google.visualization.arrayToDataTable([
+// Draw the pie chart for the Anthony's pizza when Charts is loaded.
+google.charts.setOnLoadCallback(cliente2SLA);
+
+google.charts.setOnLoadCallback(cliente3SLA);
+
+google.charts.setOnLoadCallback(cliente4SLA);
+
+google.charts.setOnLoadCallback(cliente5SLA);
+
+google.charts.setOnLoadCallback(cliente6SLA);
+
+google.charts.setOnLoadCallback(cliente7SLA);
+
+google.charts.setOnLoadCallback(cliente8SLA);
+
+// Callback that draws the pie chart for Sarah's pizza.
+function cliente1SLA() {
+
+    // Create the data table for Sarah's pizza.
+    var data = new google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-        ['Commute', 2],
-        ['Watch TV', 2],
-        ['Sleep', 7]
+        ['20s', 10],
+        ['5s', 45],
+        ['10s', 45],
     ]);
 
+    // Set options for Sarah's pie chart.
     var options = {
-        title: 'My Daily Activities'
+        legend: 'top',
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
+    // Instantiate and draw the chart for Sarah's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c1_sla'));
     chart.draw(data, options);
 }
 
-// CLIENTE 1
-google.charts.load("current", {
-    packages: ['corechart']
-});
-google.charts.setOnLoadCallback(drawChart);
+// Callback that draws the pie chart for Anthony's pizza.
+function cliente2SLA() {
 
-function drawChart() {
+    // Create the data table for Anthony's pizza.
+    var data = new google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['20s', 20],
+        ['5s', 30],
+        ['10s', 50],
+    ]);
+
+    // Set options for Anthony's pie chart.
+    var options = {
+        legend: 'top',
+    };
+
+    // Instantiate and draw the chart for Anthony's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c2_sla'));
+    chart.draw(data, options);
+}
+
+function cliente3SLA() {
+
+    // Create the data table for Anthony's pizza.
+    var data = new google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['20s', 20],
+        ['5s', 30],
+        ['10s', 50],
+    ]);
+
+    // Set options for Anthony's pie chart.
+    var options = {
+        legend: 'top',
+    };
+
+    // Instantiate and draw the chart for Anthony's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c3_sla'));
+    chart.draw(data, options);
+}
+
+function cliente4SLA() {
+
+    // Create the data table for Anthony's pizza.
+    var data = new google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['20s', 20],
+        ['5s', 30],
+        ['10s', 50],
+    ]);
+
+    // Set options for Anthony's pie chart.
+    var options = {
+        legend: 'top',
+    };
+
+    // Instantiate and draw the chart for Anthony's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c4_sla'));
+    chart.draw(data, options);
+}
+
+function cliente5SLA() {
+
+    // Create the data table for Anthony's pizza.
+    var data = new google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['20s', 20],
+        ['5s', 30],
+        ['10s', 50],
+    ]);
+
+    // Set options for Anthony's pie chart.
+    var options = {
+        legend: 'top',
+    };
+
+    // Instantiate and draw the chart for Anthony's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c5_sla'));
+    chart.draw(data, options);
+}
+
+function cliente6SLA() {
+
+    // Create the data table for Anthony's pizza.
+    var data = new google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['20s', 20],
+        ['5s', 30],
+        ['10s', 50],
+    ]);
+
+    // Set options for Anthony's pie chart.
+    var options = {
+        legend: 'top',
+    };
+
+    // Instantiate and draw the chart for Anthony's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c6_sla'));
+    chart.draw(data, options);
+}
+
+function cliente7SLA() {
+
+    // Create the data table for Anthony's pizza.
+    var data = new google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['20s', 20],
+        ['5s', 30],
+        ['10s', 50],
+    ]);
+
+    // Set options for Anthony's pie chart.
+    var options = {
+        legend: 'top',
+    };
+
+    // Instantiate and draw the chart for Anthony's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c7_sla'));
+    chart.draw(data, options);
+}
+
+function cliente8SLA() {
+
+    // Create the data table for Anthony's pizza.
+    var data = new google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['20s', 20],
+        ['5s', 30],
+        ['10s', 50],
+    ]);
+
+    // Set options for Anthony's pie chart.
+    var options = {
+        legend: 'top',
+    };
+
+    // Instantiate and draw the chart for Anthony's pizza.
+    var chart = new google.visualization.PieChart(document.getElementById('c8_sla'));
+    chart.draw(data, options);
+}
+
+
+
+// CLIENTE 1
+google.charts.setOnLoadCallback(cliente1RAA);
+
+google.charts.setOnLoadCallback(cliente2RAA);
+
+google.charts.setOnLoadCallback(cliente3RAA);
+
+google.charts.setOnLoadCallback(cliente4RAA);
+
+google.charts.setOnLoadCallback(cliente5RAA);
+
+google.charts.setOnLoadCallback(cliente6RAA);
+
+function cliente1RAA() {
+
     var data = google.visualization.arrayToDataTable([
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 300, "#F4E76E"],
-        ["", 150, "#82E198"],
-        ["", 19, "#4AAAE7"],
+        ["", 90, '#014034'],
+        ["", 38, "#736865"],
+        ["", 64, "#260101"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -59,118 +231,191 @@ function drawChart() {
         },
         backgroundColor: 'white',
     };
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+    var chart = new google.visualization.ColumnChart(document.getElementById("c1_raa"));
     chart.draw(view, options);
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values2"));
-    chart.draw(view, options);
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values3"));
-    chart.draw(view, options);
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values4"));
-    chart.draw(view, options);
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values5"));
-    chart.draw(view, options);
-    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values6"));
-    chart.draw(view, options);
-
 }
 
+function cliente2RAA() {
 
-//AMCHARTS GAUNGE
-// am4core.ready(function() {
+    var data = google.visualization.arrayToDataTable([
+        ["Element", "Quantidade", {
+            role: "style"
+        }],
+        ["", 90, '#014034'],
+        ["", 38, "#736865"],
+        ["", 64, "#260101"],
+    ]);
 
-//     // Themes begin
-//     am4core.useTheme(am4themes_animated);
-//     // Themes end
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1, {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation"
+        },
+        2
+    ]);
 
-//     // create chart
-//     var chart = am4core.create("chartdiv", am4charts.GaugeChart);
-//     chart.innerRadius = am4core.percent(82);
+    var options = {
 
-//     /**
-//      * Normal axis
-//      */
+        width: 200,
+        height: 210,
+        bar: {
+            groupWidth: "70%"
+        },
+        legend: {
+            position: "none"
+        },
+        backgroundColor: 'white',
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("c2_raa"));
+    chart.draw(view, options);
+}
 
-//     var axis = chart.xAxes.push(new am4charts.ValueAxis());
-//     //axis.min = 0;
-//     //axis.max = 100;
-//     axis.strictMinMax = true;
-//     axis.renderer.radius = am4core.percent(80);
-//     axis.renderer.inside = true;
-//     axis.renderer.line.strokeOpacity = 1;
-//     axis.renderer.ticks.template.disabled = false
-//     axis.renderer.ticks.template.strokeOpacity = 1;
-//     axis.renderer.ticks.template.length = 10;
-//     axis.renderer.grid.template.disabled = true;
-//     axis.renderer.labels.template.radius = 40;
-//     axis.renderer.labels.template.adapter.add("text", function(text) {
-//         return text + "%";
-//     })
+function cliente3RAA() {
 
-//     /**
-//      * Axis for ranges
-//      */
+    var data = google.visualization.arrayToDataTable([
+        ["Element", "Quantidade", {
+            role: "style"
+        }],
+        ["", 90, '#014034'],
+        ["", 38, "#736865"],
+        ["", 64, "#260101"],
+    ]);
 
-//     var colorSet = new am4core.ColorSet();
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1, {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation"
+        },
+        2
+    ]);
 
-//     var axis2 = chart.xAxes.push(new am4charts.ValueAxis());
-//     axis2.min = 0;
-//     axis2.max = 100;
-//     axis2.renderer.innerRadius = 10
-//     axis2.strictMinMax = true;
-//     axis2.renderer.labels.template.disabled = true;
-//     axis2.renderer.ticks.template.disabled = true;
-//     axis2.renderer.grid.template.disabled = true;
+    var options = {
 
-//     var range0 = axis2.axisRanges.create();
-//     range0.value = 0;
-//     range0.endValue = 50;
-//     range0.axisFill.fillOpacity = 1;
-//     range0.axisFill.fill = colorSet.getIndex(0);
+        width: 200,
+        height: 210,
+        bar: {
+            groupWidth: "70%"
+        },
+        legend: {
+            position: "none"
+        },
+        backgroundColor: 'white',
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("c3_raa"));
+    chart.draw(view, options);
+}
 
-//     var range1 = axis2.axisRanges.create();
-//     range1.value = 50;
-//     range1.endValue = 100;
-//     range1.axisFill.fillOpacity = 1;
-//     range1.axisFill.fill = colorSet.getIndex(2);
+function cliente4RAA() {
 
-//     /**
-//      * Label
-//      */
+    var data = google.visualization.arrayToDataTable([
+        ["Element", "Quantidade", {
+            role: "style"
+        }],
+        ["", 90, '#014034'],
+        ["", 38, "#736865"],
+        ["", 64, "#260101"],
+    ]);
 
-//     var label = chart.radarContainer.createChild(am4core.Label);
-//     label.isMeasured = false;
-//     label.fontSize = 25;
-//     label.x = am4core.percent(50);
-//     label.y = am4core.percent(100);
-//     label.horizontalCenter = "middle";
-//     label.verticalCenter = "top";
-//     label.text = "50%";
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1, {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation"
+        },
+        2
+    ]);
 
+    var options = {
 
-//     /**
-//      * Hand
-//      */
+        width: 200,
+        height: 210,
+        bar: {
+            groupWidth: "70%"
+        },
+        legend: {
+            position: "none"
+        },
+        backgroundColor: 'white',
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("c4_raa"));
+    chart.draw(view, options);
+}
 
-//     var hand = chart.hands.push(new am4charts.ClockHand());
-//     hand.axis = axis2;
-//     hand.innerRadius = am4core.percent(20);
-//     hand.startWidth = 10;
-//     hand.pin.disabled = true;
-//     hand.value = 50;
+function cliente5RAA() {
 
-//     hand.events.on("propertychanged", function(ev) {
-//         range0.endValue = ev.target.value;
-//         range1.value = ev.target.value;
-//         label.text = axis2.positionToValue(hand.currentPosition).toFixed(1);
-//         axis2.invalidate();
-//     });
+    var data = google.visualization.arrayToDataTable([
+        ["Element", "Quantidade", {
+            role: "style"
+        }],
+        ["", 90, '#014034'],
+        ["", 38, "#736865"],
+        ["", 64, "#260101"],
+    ]);
 
-//     setInterval(function() {
-//         var value = Math.round(Math.random() * 100);
-//         var animation = new am4core.Animation(hand, {
-//             property: "value",
-//             to: value
-//         }, 1000, am4core.ease.cubicOut).start();
-//     }, 2000);
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1, {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation"
+        },
+        2
+    ]);
 
-// }); // end am4core.ready()
+    var options = {
+
+        width: 200,
+        height: 210,
+        bar: {
+            groupWidth: "70%"
+        },
+        legend: {
+            position: "none"
+        },
+        backgroundColor: 'white',
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("c5_raa"));
+    chart.draw(view, options);
+}
+
+function cliente6RAA() {
+
+    var data = google.visualization.arrayToDataTable([
+        ["Element", "Quantidade", {
+            role: "style"
+        }],
+        ["", 10, '#014034'],
+        ["", 20, "#736865"],
+        ["", 30, "#260101"],
+    ]);
+
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1, {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation"
+        },
+        2
+    ]);
+
+    var options = {
+
+        width: 200,
+        height: 210,
+        bar: {
+            groupWidth: "70%"
+        },
+        legend: {
+            position: "none"
+        },
+        backgroundColor: 'white',
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("c6_raa"));
+    chart.draw(view, options);
+}

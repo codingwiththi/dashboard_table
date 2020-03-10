@@ -4,63 +4,16 @@
 <head>
     <meta bg-secondarya charset="UTF-8">
     <meta bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Nexa</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <title>Dashboard Nexa</title>
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['20s', 10],
-                ['5s', 45],
-                ['10s', 45],
-            ]);
-
-            var options = {
-                legend: 'top',
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-            chart.draw(data, options);
-            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-            chart.draw(data, options);
-            var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
-            chart.draw(data, options);
-            var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
-            chart.draw(data, options);
-            var chart = new google.visualization.PieChart(document.getElementById('piechart5'));
-            chart.draw(data, options);
-            var chart = new google.visualization.PieChart(document.getElementById('piechart6'));
-            chart.draw(data, options);
-            var chart = new google.visualization.PieChart(document.getElementById('piechart7'));
-            chart.draw(data, options);
-            var chart = new google.visualization.PieChart(document.getElementById('piechart8'));
-            chart.draw(data, options);
-        }
-    </script>
 
 </head>
 
 <body>
-    <!-- <div id="chartdiv" style="background-color: red; height: 8rem;"></div> -->
-
-
-
     <div class="container-fluid">
         <div class="table-responsive">
             <table class="table table-bordered ">
@@ -438,22 +391,22 @@
                             </div>
                         </th>
                         <td rowspan="3">
-                            <div id="columnchart_values" class="graph"></div>
+                            <div id="c1_raa" class="graph"></div>
                         </td>
                         <td rowspan="3">
-                            <div id="columnchart_values2" class="graph"></div>
+                            <div id="c2_raa" class="graph"></div>
                         </td>
                         <td rowspan="3">
-                            <div id="columnchart_values3" class="graph"></div>
+                            <div id="c3_raa" class="graph"></div>
                         </td>
                         <td rowspan="3">
-                            <div id="columnchart_values4" class="graph"></div>
+                            <div id="c4_raa" class="graph"></div>
                         </td>
                         <td rowspan="3">
-                            <div id="columnchart_values5" class="graph"></div>
+                            <div id="c5_raa" class="graph"></div>
                         </td>
                         <td rowspan="3">
-                            <div id="columnchart_values6" class="graph"></div>
+                            <div id="c6_raa" class="graph"></div>
                         </td>
                     </tr>
 
@@ -481,36 +434,37 @@
                             <div class="sla bg-info sla">
                                 <i class="material-icons">timer</i>
                                 <h6 class="card-subtitle">SLA's</h6>
+                                <h6 class="card-body">Atendimento</h6>
                             </div>
                         </th>
                         <td>
                             <div class="info c1 info_sla">
-                                <div id="piechart" style="width: 200px; height: 150px;"></div>
+                                <div id="c1_sla" style="width: 200px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
                             <div class="info c2 info_sla">
-                                <div id="piechart2" style="width: 200px; height: 150px;"></div>
+                                <div id="c2_sla" style="width: 200px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
                             <div class="info c3 info_sla">
-                                <div id="piechart3" style="width: 200px; height: 150px;"></div>
+                                <div id="c3_sla" style="width: 200px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
                             <div class="info c4 info_sla">
-                                <div id="piechart4" style="width: 200px; height: 150px;"></div>
+                                <div id="c4_sla" style="width: 200px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
                             <div class="info c5 info_sla">
-                                <div id="piechart5" style="width: 200px; height: 150px;"></div>
+                                <div id="c5_sla" style="width: 200px; height: 150px;"></div>
                             </div>
                         </td>
                         <td>
                             <div class="info c6 info_sla">
-                                <div id="piechart6" style="width: 200px; height: 150px;"></div>
+                                <div id="c6_sla" style="width: 200px; height: 150px;"></div>
                             </div>
                         </td>
 
@@ -521,16 +475,8 @@
 
     </div>
 
-
-
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="_js/script.js"></script>
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-
-
-
-
 </body>
 
 </html>
