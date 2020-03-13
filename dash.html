@@ -18,19 +18,24 @@
 </head>
 
 <body>
-    <!-- <div id="chartdiv" style="background-color: red; height: 8rem;"></div> -->
 
 
 
+    <!-- CONTAINER FLUID - O CONTAINER NÃO ESTÁ PEGANDO 100% DA TELA -->
     <div class="container-fluid">
+        <!-- TABLE RESPONSIVE -->
         <div class="table-responsive">
             <table class="table table-borderless ">
+                <!-- CABEÇALHO DA TABELA -->
                 <thead>
                     <tr>
+                        <!-- MICROFONE -->
                         <th scope="col">
                             <div class="mic bg-success">
                                 <i class="material-icons md-48">mic</i></div>
                         </th>
+
+                        <!-- CLIENTES INDETIFICADOS COM C1, C2, C3, C4, C5 E C6 -->
                         <th scope="col">
                             <div class="c1 cabecalho bg-info">
                                 TJES
@@ -59,6 +64,9 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- LINHAS, METRICAS E INFORMAÇÕES -->
+                    <!-- O QUE É INFO NA CLASS É QUE SIGNIFICA OS DADOS QUE VÃO MUDAR -->
+                    <!-- O QUE É METRICA SIGNIFICA O A PRIMEIRA COLUNA DA TABELA, FILA-ESPERANDO-AGENTES-CONVERSANDO... -->
                     <tr>
                         <th scope="row">
                             <div class="metrica bg-info fila">
@@ -215,14 +223,16 @@
                         </td>
 
                     </tr>
+                    TMA / TME
                     <tr>
                         <th scope="row">
                             <div class="metrica bg-info tma_tme">
                                 TMA / TME
-                                <!-- <i class="material-icons">access_time</i> TMA / TME -->
                             </div>
                         </th>
                         <td>
+                            <!-- EM CADA LINHA DA TABELA PRINCIPAL CONTEM UMA TABELA COM DUAS COLUNAS PARA SEPARAR
+                            TMA / TME -->
                             <table style="width:100%">
                                 <tr>
                                     <th>
@@ -237,12 +247,7 @@
                                     </th>
                                 </tr>
                             </table>
-                            <!-- <div class="info c1 info_tma bg-secondary">
-                                <i class="material-icons md-48">thumb_up</i> 00:00
-                            </div>
-                            <div class="info c1 info_tme bg-secondary">
-                                <i class="material-icons md-48">thumb_up</i> 00:00
-                            </div> -->
+
                         </td>
                         <td>
                             <table style="width:100%">
@@ -259,9 +264,6 @@
                                     </th>
                                 </tr>
                             </table>
-                            <!-- <div class="info c2 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div> -->
                         </td>
                         <td>
                             <table style="width:100%">
@@ -278,9 +280,6 @@
                                     </th>
                                 </tr>
                             </table>
-                            <!-- <div class="info c3 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div> -->
                         </td>
                         <td>
                             <table style="width:100%">
@@ -297,9 +296,6 @@
                                     </th>
                                 </tr>
                             </table>
-                            <!-- <div class="info c4 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div> -->
                         </td>
                         <td>
                             <table style="width:100%">
@@ -316,9 +312,6 @@
                                     </th>
                                 </tr>
                             </table>
-                            <!-- <div class="info c5 info_tma bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div> -->
                         </td>
                         <td>
                             <table style="width:100%">
@@ -335,62 +328,8 @@
                                     </th>
                                 </tr>
                             </table>
-                            <!-- <div class="info c6 info_tma bg-danger">
-                                <i class="material-icons">thumb_down</i> 10:00
-                            </div> -->
                         </td>
-
                     </tr>
-
-                    <!-- <tr>
-                        <th scope="row">
-                            <div class="metrica bg-info tme">
-                                <i class="material-icons">access_time</i>
-                                <h6 class="card-subtitle">TME</h6>
-                            </div>
-                        </th>
-                        <td>
-                            <div class="info c1 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c2 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c3 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c5 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c6 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c7 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c8 info_tme bg-secondary">
-                                <i class="material-icons">thumb_up</i> 00:00
-                            </div>
-                        </td>
-                    </tr> -->
-
                     <tr>
                         <th scope="row">
                             <div class="metrica recebidas">
@@ -398,22 +337,23 @@
                                 <h6 class="card-subtitle">Recebidas</h6>
                             </div>
                         </th>
-                        <td rowspan="3">
+                        <!-- GRAFICOS -->
+                        <td rowspan="4">
                             <div id="c1_raa" class="graph"></div>
                         </td>
-                        <td rowspan="3">
+                        <td rowspan="4">
                             <div id="c2_raa" class="graph"></div>
                         </td>
-                        <td rowspan="3">
+                        <td rowspan="4">
                             <div id="c3_raa" class="graph"></div>
                         </td>
-                        <td rowspan="3">
+                        <td rowspan="4">
                             <div id="c4_raa" class="graph"></div>
                         </td>
-                        <td rowspan="3">
+                        <td rowspan="4">
                             <div id="c5_raa" class="graph"></div>
                         </td>
-                        <td rowspan="3">
+                        <td rowspan="4">
                             <div id="c6_raa" class="graph"></div>
                         </td>
                     </tr>
@@ -423,6 +363,18 @@
                             <div class="metrica atendidas">
                                 <i class="material-icons">phone</i>
                                 <h6 class="card-subtitle">Atendidas</h6>
+                            </div>
+                        </th>
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <div class="metrica efetuadas">
+                                <i class="material-icons">
+                                    phone_forwarded
+                                </i>
+                                <h6 class="card-subtitle">Efetuadas</h6>
                             </div>
                         </th>
 
@@ -445,6 +397,8 @@
                             </div>
                         </th>
                         <td>
+                            <!-- TABELAS SLA's -->
+                            <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
                             <table style="width:100%" class="table_sla">
                                 <tr class="sla_metrica bg-secondary">
                                     <th>TIPO</th>
@@ -456,14 +410,14 @@
                                     <td class="text-center bg-secondary">Aban</td>
                                     <td class="text-center bg-secondary">20s</td>
                                     <td class="text-center bg-secondary">
-                                        <=10%</td>
+                                        <=10%< /td>
                                             <td class="info_sla text-center bg-danger">15%</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center bg-secondary">Conv</td>
                                     <td class="text-center bg-secondary">20m</td>
                                     <td class="text-center bg-secondary">
-                                        <=5%</td>
+                                        <=5%< /td>
                                             <td class="info_sla text-center bg-secondary">3%</td>
                                 </tr>
 
@@ -483,19 +437,16 @@
                                         <td class="text-center bg-secondary">Aban</td>
                                         <td class="text-center bg-secondary">20s</td>
                                         <td class="text-center bg-secondary">
-                                            <=10%</td>
+                                            <=10%< /td>
                                                 <td class="info_sla text-center bg-danger">15%</td>
                                     </tr>
                                     <tr>
                                         <td class="text-center bg-secondary">Conv</td>
                                         <td class="text-center bg-secondary">20m</td>
                                         <td class="text-center bg-secondary">
-                                            <=5%</td>
+                                            <=5%< /td>
                                                 <td class="info_sla text-center bg-secondary">3%</td>
                                     </tr>
-
-
-
                                 </table>
 
                                 </td>
@@ -511,14 +462,14 @@
                                             <td class="text-center bg-secondary">Aban</td>
                                             <td class="text-center bg-secondary">20s</td>
                                             <td class="text-center bg-secondary">
-                                                <=10%</td>
+                                                <=10%< /td>
                                                     <td class="info_sla text-center bg-danger">15%</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center bg-secondary">Conv</td>
                                             <td class="text-center bg-secondary">20m</td>
                                             <td class="text-center bg-secondary">
-                                                <=5%</td>
+                                                <=5%< /td>
                                                     <td class="info_sla text-center bg-secondary">3%</td>
                                         </tr>
 
@@ -539,14 +490,14 @@
                                                 <td class="text-center bg-secondary">Aban</td>
                                                 <td class="text-center bg-secondary">20s</td>
                                                 <td class="text-center bg-secondary">
-                                                    <=10%</td>
+                                                    <=10%< /td>
                                                         <td class="info_sla text-center bg-danger">15%</td>
                                             </tr>
                                             <tr>
                                                 <td class="text-center bg-secondary">Conv</td>
                                                 <td class="text-center bg-secondary">20m</td>
                                                 <td class="text-center bg-secondary">
-                                                    <=5%</td>
+                                                    <=5%< /td>
                                                         <td class="info_sla text-center bg-secondary">3%</td>
                                             </tr>
 
@@ -567,14 +518,14 @@
                                                     <td class="text-center bg-secondary">Aban</td>
                                                     <td class="text-center bg-secondary">20s</td>
                                                     <td class="text-center bg-secondary">
-                                                        <=10%</td>
+                                                        <=10%< /td>
                                                             <td class="info_sla text-center bg-danger">15%</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center bg-secondary">Conv</td>
                                                     <td class="text-center bg-secondary">20m</td>
                                                     <td class="text-center bg-secondary">
-                                                        <=5%</td>
+                                                        <=5%< /td>
                                                             <td class="info_sla text-center bg-secondary">3%</td>
                                                 </tr>
 
@@ -595,28 +546,21 @@
                                                         <td class="text-center bg-secondary">Aban</td>
                                                         <td class="text-center bg-secondary">20s</td>
                                                         <td class="text-center bg-secondary">
-                                                            <=10%</td>
+                                                            <=10%< /td>
                                                                 <td class="info_sla text-center bg-danger">15%</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-center bg-secondary">Conv</td>
                                                         <td class="text-center bg-secondary">20m</td>
                                                         <td class="text-center bg-secondary">
-                                                            <=5%</td>
+                                                            <=5%< /td>
                                                                 <td class="info_sla text-center bg-secondary">3%</td>
                                                     </tr>
-
-
-
                                                 </table>
-
                                                 </td>
-
                     </tr>
 
-
         </div>
-
     </div>
 
 

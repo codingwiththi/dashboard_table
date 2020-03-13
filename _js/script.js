@@ -24,9 +24,10 @@ function cliente1RAA() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 40, '#6200ea'],
-        ["", 20, "#004d40"],
-        ["", 64, "#b71c1c"],
+        ["", 20, '#F0A32F'],
+        ["", 38, "#56B949"],
+        ["", 64, "#30499B"],
+        ["", 70, "#EE4035"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -41,8 +42,8 @@ function cliente1RAA() {
 
     var options = {
 
-        width: 200,
-        height: 150,
+        width: 265,
+        height: 200,
         bar: {
             groupWidth: "70%"
         },
@@ -61,9 +62,10 @@ function cliente2RAA() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 90, '#6200ea'],
-        ["", 38, "#004d40"],
-        ["", 64, "#b71c1c"],
+        ["", 20, '#F0A32F'],
+        ["", 38, "#56B949"],
+        ["", 64, "#30499B"],
+        ["", 70, "#EE4035"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -79,7 +81,7 @@ function cliente2RAA() {
     var options = {
 
         width: 200,
-        height: 150,
+        height: 200,
         bar: {
             groupWidth: "70%"
         },
@@ -98,9 +100,10 @@ function cliente3RAA() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 20, '#6200ea'],
-        ["", 38, "#004d40"],
-        ["", 64, "#b71c1c"],
+        ["", 20, '#F0A32F'],
+        ["", 38, "#56B949"],
+        ["", 64, "#30499B"],
+        ["", 70, "#EE4035"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -116,7 +119,7 @@ function cliente3RAA() {
     var options = {
 
         width: 200,
-        height: 150,
+        height: 200,
         bar: {
             groupWidth: "70%"
         },
@@ -135,9 +138,10 @@ function cliente4RAA() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 90, '#6200ea'],
-        ["", 38, "#004d40"],
-        ["", 64, "#b71c1c"],
+        ["", 20, '#F0A32F'],
+        ["", 38, "#56B949"],
+        ["", 64, "#30499B"],
+        ["", 70, "#EE4035"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -153,7 +157,7 @@ function cliente4RAA() {
     var options = {
 
         width: 200,
-        height: 150,
+        height: 200,
         bar: {
             groupWidth: "70%"
         },
@@ -172,9 +176,10 @@ function cliente5RAA() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 90, '#6200ea'],
-        ["", 38, "#004d40"],
-        ["", 64, "#b71c1c"],
+        ["", 20, '#F0A32F'],
+        ["", 38, "#56B949"],
+        ["", 64, "#30499B"],
+        ["", 70, "#EE4035"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -190,7 +195,7 @@ function cliente5RAA() {
     var options = {
 
         width: 200,
-        height: 150,
+        height: 200,
         bar: {
             groupWidth: "70%"
         },
@@ -209,9 +214,10 @@ function cliente6RAA() {
         ["Element", "Quantidade", {
             role: "style"
         }],
-        ["", 90, '#6200ea'],
-        ["", 38, "#004d40"],
-        ["", 64, "#b71c1c"],
+        ["", 20, '#F0A32F'],
+        ["", 38, "#56B949"],
+        ["", 64, "#30499B"],
+        ["", 70, "#EE4035"],
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -227,7 +233,7 @@ function cliente6RAA() {
     var options = {
 
         width: 200,
-        height: 150,
+        height: 200,
         bar: {
             groupWidth: "70%"
         },
