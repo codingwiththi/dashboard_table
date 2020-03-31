@@ -1,579 +1,598 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta bg-secondarya charset="UTF-8">
+        <meta bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="_js/jquery.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
+        <link rel="stylesheet" href="_css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <title>Dashboard Nexa</title>
+    </head>
+    <body>
+        <!-- CONTAINER FLUID - O CONTAINER NÃO ESTÁ PEGANDO 100% DA TELA -->
+        <div class="container-fluid">
+            <!-- TABLE RESPONSIVE -->
+            <div class="table-responsive">
+                <table class="table table-borderless ">
+                    <!-- CABEÇALHO DA TABELA -->
+                    <thead>
+                        <tr>
+                            <!-- MICROFONE -->
+                            <th scope="col">
+                                <div class="mic mic_on">
+                                    <i id ="mi" class="material-icons">mic</i>
+                                    <h6 id="chamado" class="card-subtitle" hidden>105568</h6>
+                                </div>
+                                
+                            </th>
 
-<head>
-    <meta bg-secondarya charset="UTF-8">
-    <meta bg-secondarya name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="_css/style.css" media="screen" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <title>Dashboard Nexa</title>
-
-</head>
-
-<body>
-
-
-
-    <!-- CONTAINER FLUID - O CONTAINER NÃO ESTÁ PEGANDO 100% DA TELA -->
-    <div class="container-fluid">
-        <!-- TABLE RESPONSIVE -->
-        <div class="table-responsive">
-            <table class="table table-borderless ">
-                <!-- CABEÇALHO DA TABELA -->
-                <thead>
-                    <tr>
-                        <!-- MICROFONE -->
-                        <th scope="col">
-                            <div class="mic bg-success">
-                                <i class="material-icons md-48">mic</i></div>
-                        </th>
-
-                        <!-- CLIENTES INDETIFICADOS COM C1, C2, C3, C4, C5 E C6 -->
-                        <th scope="col">
-                            <div class="c1 cabecalho bg-info">
-                                TJES
-                            </div>
-                        </th>
-                        <th scope="col">
-                            <div class="cabecalho bg-info c2">UNIMED
-                            </div>
-                        </th>
-                        <th scope="col">
-                            <div class="cabecalho bg-info c3">SEGER
-                            </div>
-                        </th>
-                        <th scope="col">
-                            <div class="cabecalho bg-info c4">SULGAS
-                            </div>
-                        </th>
-                        <th scope="col">
-                            <div class="cabecalho bg-info c5">SUNCOKE
-                            </div>
-                        </th>
-                        <th scope="col">
-                            <div class="cabecalho bg-info c6">TECHNIP PTG
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- LINHAS, METRICAS E INFORMAÇÕES -->
-                    <!-- O QUE É INFO NA CLASS É QUE SIGNIFICA OS DADOS QUE VÃO MUDAR -->
-                    <!-- O QUE É METRICA SIGNIFICA O A PRIMEIRA COLUNA DA TABELA, FILA-ESPERANDO-AGENTES-CONVERSANDO... -->
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica bg-info fila">
-                                <i class="material-icons">ring_volume</i>
-                                <h6 class="card-subtitle">Fila</h6>
-                            </div>
-                        </th>
-                        <td>
-                            <div class="info c1 info_fila bg-success">
-                                0
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c2 info_fila bg-success">
-                                0
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c3 info_fila bg-success">
-                                0
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_fila bg-danger">
-                                1
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c5 info_fila bg-success">
-                                0
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c6 info_fila bg-danger">
-                                3
-                            </div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <div class="temporizador bg-info">
-                                <h6 class="card-subtitle">Esperando</h6>
-                            </div>
-                        </th>
-                        <td class="linha_contador">
-                            <div class="bg-success c1 info_contador text-center contador">
-                                00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="bg-success c2 info_contador text-center contador">
-                                00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="bg-success c3 info_contador text-center contador">
-                                00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="bg-danger c4 info_contador text-center contador">
-                                05:32
-                            </div>
-                        </td>
-                        <td>
-                            <div class="bg-success c5 info_contador text-center contador">
-                                00:00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="bg-danger c6 info_contador text-center contador">
-                                01:04
-                            </div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica bg-info agentes">
-                                <i class="material-icons">portrait</i>
-                                <h6 class="card-subtitle">Agentes</h6>
-                            </div>
-                        </th>
-                        <td>
-                            <div class="info c1 info_agentes bg-danger">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c2 info_agentes bg-success">
-                                04
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c3 info_agentes bg-danger">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_agentes bg-danger">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c5 info_agentes bg-danger">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c6 info_agentes bg-danger">
-                                00
-                            </div>
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica bg-info conversando">
-                                <i class="material-icons">phone_in_talk</i>
-                                <h6 class="card-subtitle">Conversando</h6>
-                            </div>
-                        </th>
-                        <td>
-                            <div class="info c1 info_conv bg-secondary">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c2 info_conv bg-secondary">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c3 info_conv bg-secondary">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c4 info_conv bg-secondary">
-                                04
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c5 info_conv bg-secondary">
-                                00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="info c6 info_conv bg-secondary">
-                                00
-                            </div>
-                        </td>
-
-                    </tr>
-                    TMA / TME
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica bg-info tma_tme">
-                                TMA / TME
-                            </div>
-                        </th>
-                        <td>
-                            <!-- EM CADA LINHA DA TABELA PRINCIPAL CONTEM UMA TABELA COM DUAS COLUNAS PARA SEPARAR
-                            TMA / TME -->
-                            <table style="width:100%">
-                                <tr>
-                                    <th>
-                                        <div class="info c1 info_tma bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 10:10
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="info c1 info_tme bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                </tr>
-                            </table>
-
-                        </td>
-                        <td>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>
-                                        <div class="info c2 info_tma bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="info c2 info_tme bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>
-                                        <div class="info c3 info_tma bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="info c3 info_tme bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>
-                                        <div class="info c4 info_tma bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="info c4 info_tme bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>
-                                        <div class="info c5 info_tma bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="info c5 info_tme bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>
-                                        <div class="info c6 info_tma bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="info c6 info_tme bg-secondary">
-                                            <i class="material-icons md-18">thumb_up</i> 00:00
-                                        </div>
-                                    </th>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica recebidas">
-                                <i class="material-icons">phone_callback</i>
-                                <h6 class="card-subtitle">Recebidas</h6>
-                            </div>
-                        </th>
-                        <!-- GRAFICOS -->
-                        <td rowspan="4">
-                            <div id="c1_raa" class="graph"></div>
-                        </td>
-                        <td rowspan="4">
-                            <div id="c2_raa" class="graph"></div>
-                        </td>
-                        <td rowspan="4">
-                            <div id="c3_raa" class="graph"></div>
-                        </td>
-                        <td rowspan="4">
-                            <div id="c4_raa" class="graph"></div>
-                        </td>
-                        <td rowspan="4">
-                            <div id="c5_raa" class="graph"></div>
-                        </td>
-                        <td rowspan="4">
-                            <div id="c6_raa" class="graph"></div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica atendidas">
-                                <i class="material-icons">phone</i>
-                                <h6 class="card-subtitle">Atendidas</h6>
-                            </div>
-                        </th>
-
-                    </tr>
-
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica efetuadas">
-                                <i class="material-icons">
-                                    phone_forwarded
-                                </i>
-                                <h6 class="card-subtitle">Efetuadas</h6>
-                            </div>
-                        </th>
-
-                    </tr>
-
-                    <tr>
-                        <th scope="row">
-                            <div class="metrica abandonadas">
-                                <i class="material-icons">phone_missed</i>
-                                <h6 class="card-subtitle">Abandonadas</h6>
-                            </div>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <div class="sla bg-info sla">
-                                <i class="material-icons">timer</i>
-                                <h6 class="card-subtitle">SLA's</h6>
-                            </div>
-                        </th>
-                        <td>
-                            <!-- TABELAS SLA's -->
-                            <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
-                            <table style="width:100%" class="table_sla">
-                                <tr class="sla_metrica bg-secondary">
-                                    <th>TIPO</th>
-                                    <th>TEMPO</th>
-                                    <th>META</th>
-                                    <th>ATINGIDO</th>
-                                </tr>
-                                <tr>
-                                    <td class="text-center bg-secondary">Aban</td>
-                                    <td class="text-center bg-secondary">20s</td>
-                                    <td class="text-center bg-secondary">
-                                        <=10%< /td>
-                                            <td class="info_sla text-center bg-danger">15%</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center bg-secondary">Conv</td>
-                                    <td class="text-center bg-secondary">20m</td>
-                                    <td class="text-center bg-secondary">
-                                        <=5%< /td>
-                                            <td class="info_sla text-center bg-secondary">3%</td>
-                                </tr>
-
-
-
-                            </table>
+                            <!-- CLIENTES INDETIFICADOS COM C1, C2, C3, C4, C5 E C6 -->
+                            <th scope="col">
+                                <div id="tjes" class="cabecalho bg-info c1">TJES
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div id="unimed" class="cabecalho bg-info c2">UNIMED
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div id="seger" class="cabecalho bg-info c3">SEGER
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div id="sulgas" class="cabecalho bg-info c4">SULGAS
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div id="suncoke" class="cabecalho bg-info c5">SUNCOKE
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div id="techpt" class="cabecalho bg-info c6">TECH. PT
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- LINHAS, METRICAS E INFORMAÇÕES -->
+                        <!-- O QUE É INFO NA CLASS É QUE SIGNIFICA OS DADOS QUE VÃO MUDAR -->
+                        <!-- O QUE É METRICA SIGNIFICA O A PRIMEIRA COLUNA DA TABELA, FILA-ESPERANDO-AGENTES-CONVERSANDO... -->
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica bg-info fila">
+                                    <i class="material-icons">ring_volume</i>
+                                    <h6 class="card-subtitle">Fila</h6>
+                                </div>
+                            </th>
+                            <td>
+                                <div id="fic1" class="info c1 info_fila bg-success">
+                                    0
+                                </div>
                             </td>
                             <td>
-                                <table style="width:100%" class="table_sla">
-                                    <tr class="sla_metrica bg-secondary">
-                                        <th>TIPO</th>
-                                        <th>TEMPO</th>
-                                        <th>META</th>
-                                        <th>ATINGIDO</th>
+                                <div id="fic2" class="info c2 info_fila bg-success">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="fic3" class="info c3 info_fila bg-success">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="fic4" class="info c4 info_fila bg-success">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="fic5" class="info c5 info_fila bg-success">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="fic6" class="info c6 info_fila bg-success">
+                                    0
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="temporizador bg-info">
+                                    <h6 class="card-subtitle">Esperando</h6>
+                                </div>
+                            </th>
+                            <td class="linha_contador">
+                                <div id="coc1" class="bg-success c1 info_contador text-center contador">
+                                    00:00:00
+                                </div>
+                            </td>
+                            <td>
+                                <div id="coc2" class="bg-success c2 info_contador text-center contador">
+                                    00:00:00
+                                </div>
+                            </td>
+                            <td>
+                                <div id="coc3" class="bg-success c3 info_contador text-center contador">
+                                    00:00:00
+                                </div>
+                            </td>
+                            <td>
+                                <div id="coc4" class="bg-success c4 info_contador text-center contador">
+                                    00:00:00
+                                </div>
+                            </td>
+                            <td>
+                                <div id="coc5" class="bg-success c5 info_contador text-center contador">
+                                    00:00:00
+                                </div>
+                            </td>
+                            <td>
+                                <div id="coc6" class="bg-success c6 info_contador text-center contador">
+                                    00:00:00
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica bg-info agentes">
+                                    <i class="material-icons">portrait</i>
+                                    <h6 class="card-subtitle">Agentes</h6>
+                                </div>
+                            </th>
+                            <td>
+                                <div id="ag1" class="info c1 info_agentes bg-danger">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="ag2" class="info c2 info_agentes bg-danger">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="ag3" class="info c3 info_agentes bg-danger">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="ag4" class="info c4 info_agentes bg-danger">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="ag5" class="info c5 info_agentes bg-danger">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="ag6" class="info c6 info_agentes bg-danger">
+                                    0
+                                </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica bg-info conversando">
+                                    <i class="material-icons">phone_in_talk</i>
+                                    <h6 class="card-subtitle">Conversando</h6>
+                                </div>
+                                
+                            </th>
+                            <td>
+                                <div class="info c1 info_conv bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c2 info_conv bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c3 info_conv bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c4 info_conv bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c5 info_conv bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c6 info_conv bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                        </tr>           
+                        <!-- Pausa-->
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica bg-info pausa">
+                                    <span class="material-icons">
+                                        pause_circle_filled
+                                        </span>
+                                        <h6 class="card-subtitle">Pausa</h6>
+                                </div>
+                                
+                            </th>
+                            <td>
+                                <div class="info c1 info_pausa bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c2 info_pausa bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c3 info_pausa bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c4 info_pausa bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c5 info_pausa bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info c6 info_pausa bg-secondary">
+                                    0
+                                </div>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica bg-info tma_tme">
+                                    TMA / TME
+                                </div>
+                            </th>
+                            <td>
+                                <!-- EM CADA LINHA DA TABELA PRINCIPAL CONTEM UMA TABELA COM DUAS COLUNAS PARA SEPARAR
+TMA / TME -->
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>
+                                            <div class="info c1 info_tma bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 10:10
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="info c1 info_tme bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
                                     </tr>
+                                </table>
+
+                            </td>
+                            <td>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>
+                                            <div class="info c2 info_tma bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="info c2 info_tme bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>
+                                            <div class="info c3 info_tma bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="info c3 info_tme bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>
+                                            <div class="info c4 info_tma bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="info c4 info_tme bg-danger">
+                                                <i class="material-icons md-18">thumb_down</i> 10:07
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>
+                                            <div class="info c5 info_tma bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="info c5 info_tme bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>
+                                            <div class="info c6 info_tma bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="info c6 info_tme bg-secondary">
+                                                <i class="material-icons md-18">thumb_up</i> 00:00
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica efetuadas">
+                                    <i class="material-icons">phone_forwarded</i>
+                                    <h6 class="card-subtitle">Efetuadas</h6>
+                                </div>
+                            </th>
+                            <!-- GRAFICOS -->
+                            <td rowspan="4">
+                                <div id="c1_raa" class="graph"></div>
+                            </td>
+                            <td rowspan="4">
+                                <div id="c2_raa" class="graph"></div>
+                            </td>
+                            <td rowspan="4">
+                                <div id="c3_raa" class="graph"></div>
+                            </td>
+                            <td rowspan="4">
+                                <div id="c4_raa" class="graph"></div>
+                            </td>
+                            <td rowspan="4">
+                                <div id="c5_raa" class="graph"></div>
+                            </td>
+                            <td rowspan="4">
+                                <div id="c6_raa" class="graph"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica recebidas">
+                                    <i class="material-icons">phone_callback</i>
+                                    <h6 class="card-subtitle">Recebidas</h6>
+                                </div>
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica atendidas">
+                                    <i class="material-icons">phone</i>
+                                    <h6 class="card-subtitle">Atendidas</h6>
+                                </div>
+                            </th>
+
+                        </tr>
+
+                        <tr>
+                            <th scope="row">
+                                <div class="metrica abandonadas">
+                                    <i class="material-icons">                                        
+                                        phone_missed
+                                    </i>
+                                    <h6 class="card-subtitle">Perdidas</h6>
+                                </div>
+                            </th>
+
+                        </tr>
+
+
+                        <tr>
+                            <th scope="row">
+                                <div class="sla bg-info sla">
+                                    <i class="material-icons">timer</i>
+                                    <h6 class="card-subtitle">SLA's</h6>
+                                </div>
+                            </th>
+                            <td>
+                                <!-- TABELAS SLA's -->
+                                <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
+                                <table style="width:100%" class="table_sla">
+                                    <thead>
+                                        <tr class="sla_metrica bg-secondary">
+                                            <th class="text-center" >TIPO</th>
+                                            <th class="text-center" >TEMPO</th>
+                                            <th class="text-center" >META</th>
+                                            <th class="text-center" >ATINGIDO</th>
+                                        </tr>
+                                    </thead>
                                     <tr>
                                         <td class="text-center bg-secondary">Aban</td>
                                         <td class="text-center bg-secondary">20s</td>
-                                        <td class="text-center bg-secondary">
-                                            <=10%< /td>
-                                                <td class="info_sla text-center bg-danger">15%</td>
+                                        <td class="text-center bg-secondary">&lt;=10%</td>
+                                        <td class="info_sla text-center bg-danger">15%</td>
                                     </tr>
                                     <tr>
                                         <td class="text-center bg-secondary">Conv</td>
                                         <td class="text-center bg-secondary">20m</td>
-                                        <td class="text-center bg-secondary">
-                                            <=5%< /td>
-                                                <td class="info_sla text-center bg-secondary">3%</td>
+                                        <td class="text-center bg-secondary">&lt;=5%</td>
+                                        <td class="info_sla text-center bg-secondary">3%</td>
                                     </tr>
                                 </table>
-
-                                </td>
-                                <td>
-                                    <table style="width:100%" class="table_sla">
+                            </td>
+                            <td>
+                                <!-- TABELAS SLA's -->
+                                <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
+                                <table style="width:100%" class="table_sla">
+                                    <thead>
                                         <tr class="sla_metrica bg-secondary">
                                             <th>TIPO</th>
                                             <th>TEMPO</th>
                                             <th>META</th>
                                             <th>ATINGIDO</th>
                                         </tr>
-                                        <tr>
-                                            <td class="text-center bg-secondary">Aban</td>
-                                            <td class="text-center bg-secondary">20s</td>
-                                            <td class="text-center bg-secondary">
-                                                <=10%< /td>
-                                                    <td class="info_sla text-center bg-danger">15%</td>
+                                    </thead>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Aban</td>
+                                        <td class="text-center bg-secondary">20s</td>
+                                        <td class="text-center bg-secondary">&lt;=10%</td>
+                                        <td class="info_sla text-center bg-danger">15%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Conv</td>
+                                        <td class="text-center bg-secondary">20m</td>
+                                        <td class="text-center bg-secondary">&lt;=5%</td>
+                                        <td class="info_sla text-center bg-secondary">3%</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <!-- TABELAS SLA's -->
+                                <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
+                                <table style="width:100%" class="table_sla">
+                                    <thead>
+                                        <tr class="sla_metrica bg-secondary">
+                                            <th>TIPO</th>
+                                            <th>TEMPO</th>
+                                            <th>META</th>
+                                            <th>ATINGIDO</th>
                                         </tr>
-                                        <tr>
-                                            <td class="text-center bg-secondary">Conv</td>
-                                            <td class="text-center bg-secondary">20m</td>
-                                            <td class="text-center bg-secondary">
-                                                <=5%< /td>
-                                                    <td class="info_sla text-center bg-secondary">3%</td>
+                                    </thead>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Aban</td>
+                                        <td class="text-center bg-secondary">20s</td>
+                                        <td class="text-center bg-secondary">&lt;=10%</td>
+                                        <td class="info_sla text-center bg-danger">15%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Conv</td>
+                                        <td class="text-center bg-secondary">20m</td>
+                                        <td class="text-center bg-secondary">&lt;=5%</td>
+                                        <td class="info_sla text-center bg-secondary">3%</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <!-- TABELAS SLA's -->
+                                <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
+                                <table style="width:100%" class="table_sla">
+                                    <thead>
+                                        <tr class="sla_metrica bg-secondary">
+                                            <th>TIPO</th>
+                                            <th>TEMPO</th>
+                                            <th>META</th>
+                                            <th>ATINGIDO</th>
                                         </tr>
-
-
-
-                                    </table>
-
-                                    </td>
-                                    <td>
-                                        <table style="width:100%" class="table_sla">
-                                            <tr class="sla_metrica bg-secondary">
-                                                <th>TIPO</th>
-                                                <th>TEMPO</th>
-                                                <th>META</th>
-                                                <th>ATINGIDO</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center bg-secondary">Aban</td>
-                                                <td class="text-center bg-secondary">20s</td>
-                                                <td class="text-center bg-secondary">
-                                                    <=10%< /td>
-                                                        <td class="info_sla text-center bg-danger">15%</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center bg-secondary">Conv</td>
-                                                <td class="text-center bg-secondary">20m</td>
-                                                <td class="text-center bg-secondary">
-                                                    <=5%< /td>
-                                                        <td class="info_sla text-center bg-secondary">3%</td>
-                                            </tr>
-
-
-
-                                        </table>
-
-                                        </td>
-                                        <td>
-                                            <table style="width:100%" class="table_sla">
-                                                <tr class="sla_metrica bg-secondary">
-                                                    <th>TIPO</th>
-                                                    <th>TEMPO</th>
-                                                    <th>META</th>
-                                                    <th>ATINGIDO</th>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center bg-secondary">Aban</td>
-                                                    <td class="text-center bg-secondary">20s</td>
-                                                    <td class="text-center bg-secondary">
-                                                        <=10%< /td>
-                                                            <td class="info_sla text-center bg-danger">15%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center bg-secondary">Conv</td>
-                                                    <td class="text-center bg-secondary">20m</td>
-                                                    <td class="text-center bg-secondary">
-                                                        <=5%< /td>
-                                                            <td class="info_sla text-center bg-secondary">3%</td>
-                                                </tr>
-
-
-
-                                            </table>
-
-                                            </td>
-                                            <td>
-                                                <table style="width:100%" class="table_sla">
-                                                    <tr class="sla_metrica bg-secondary">
-                                                        <th>TIPO</th>
-                                                        <th>TEMPO</th>
-                                                        <th>META</th>
-                                                        <th>ATINGIDO</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center bg-secondary">Aban</td>
-                                                        <td class="text-center bg-secondary">20s</td>
-                                                        <td class="text-center bg-secondary">
-                                                            <=10%< /td>
-                                                                <td class="info_sla text-center bg-danger">15%</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center bg-secondary">Conv</td>
-                                                        <td class="text-center bg-secondary">20m</td>
-                                                        <td class="text-center bg-secondary">
-                                                            <=5%< /td>
-                                                                <td class="info_sla text-center bg-secondary">3%</td>
-                                                    </tr>
-                                                </table>
-                                                </td>
-                    </tr>
-
+                                    </thead>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Aban</td>
+                                        <td class="text-center bg-secondary">20s</td>
+                                        <td class="text-center bg-secondary">&lt;=10%</td>
+                                        <td class="info_sla text-center bg-danger">15%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Conv</td>
+                                        <td class="text-center bg-secondary">20m</td>
+                                        <td class="text-center bg-secondary">&lt;=5%</td>
+                                        <td class="info_sla text-center bg-secondary">3%</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <!-- TABELAS SLA's -->
+                                <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
+                                <table style="width:100%" class="table_sla">
+                                    <thead>
+                                        <tr class="sla_metrica bg-secondary">
+                                            <th>TIPO</th>
+                                            <th>TEMPO</th>
+                                            <th>META</th>
+                                            <th>ATINGIDO</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Aban</td>
+                                        <td class="text-center bg-secondary">20s</td>
+                                        <td class="text-center bg-secondary">&lt;=10%</td>
+                                        <td class="info_sla text-center bg-danger">15%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Conv</td>
+                                        <td class="text-center bg-secondary">20m</td>
+                                        <td class="text-center bg-secondary">&lt;=5%</td>
+                                        <td class="info_sla text-center bg-secondary">3%</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <!-- TABELAS SLA's -->
+                                <!-- MAIS UMA VEZ EM CADA CELULA TEM UMA TABELA DENTRO DA TABELA PRINCIPAL -->
+                                <table style="width:100%" class="table_sla">
+                                    <thead>
+                                        <tr class="sla_metrica bg-secondary">
+                                            <th>TIPO</th>
+                                            <th>TEMPO</th>
+                                            <th>META</th>
+                                            <th>ATINGIDO</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Aban</td>
+                                        <td class="text-center bg-secondary">20s</td>
+                                        <td class="text-center bg-secondary">&lt;=10%</td>
+                                        <td class="info_sla text-center bg-danger">15%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center bg-secondary">Conv</td>
+                                        <td class="text-center bg-secondary">20m</td>
+                                        <td class="text-center bg-secondary">&lt;=5%</td>
+                                        <td class="info_sla text-center bg-secondary">3%</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-
-
-
-    <script src="_js/script.js"></script>
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/kelly.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-
-
-
-
-</body>
-
+        <script src="_js/graficos.js"></script>
+        <script src="_js/visual.js"></script>
+        <script src="_js/simulador.js"></script>
+    </body>
 </html>
